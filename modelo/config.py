@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE = Path(r"/Users/andre/Documents/ELECTROMOV/Electrolineras")
+BASE = Path(r"C:\Users\uriel\OneDrive\Documents\Programacion\HACKATHONES\CDMX\ODST-Electrolineras")
 ZONES_GEOJSON = BASE / "html" / "viabilidad_cdmx_v2.geojson"
 CENSUS_CSV    = BASE / "clean" / "RESAGEBURB_09CSV20.csv"
 CHARGERS_JSON = BASE / "datasets" / "all_chargers_geo.json"

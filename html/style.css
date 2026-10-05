@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.map-wrapper {
+    position: relative;
+    width: 1000px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.mapa {
+    width: 100%;
+    height: 1000px;
+}
+
+.leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.popup-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.active {
+    background-color: #28a745;
+}
+
+.nota {
+    max-width: 1000px;
+    color: #555;
+    font-size: 13px;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+.legend {
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.legend i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    vertical-align: middle;
+    opacity: 0.8;
+}
+
+/* Sidebar Styles */
+.chargers-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    z-index: 1000; /* above Leaflet */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.chargers-sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-toggle {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 40px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.sidebar-toggle:focus {
+    outline: none;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar-content h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.color-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 12px;
+    border: 1px solid #555;
+}
